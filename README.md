@@ -186,3 +186,4 @@ A new chat knows nothing. Attach `README.md` and the five `docs/` files, then pa
 | Install or build errors          | Check `node -v` is 22+, delete `node_modules`, run `npm install` |
 | CI fails but local passes        | Run `npm ci` then `npm run check` locally                        |
 "# safespace" 
+"# safespace" 
