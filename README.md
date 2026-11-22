@@ -187,3 +187,4 @@ A new chat knows nothing. Attach `README.md` and the five `docs/` files, then pa
 | CI fails but local passes        | Run `npm ci` then `npm run check` locally                        |
 "# safespace" 
 "# safespace" 
+"# safespace" 
