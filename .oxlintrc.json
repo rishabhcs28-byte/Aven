@@ -1,0 +1,39 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }],
+    "typescript/no-explicit-any": "error",
+    "eqeqeq": "error",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "@supabase/supabase-js",
+            "message": "Use the Supabase client only inside src/lib or src/features/*/services."
+          },
+          {
+            "name": "@/lib/supabase",
+            "message": "Only src/features/*/services may import the Supabase client."
+          }
+        ],
+        "patterns": [
+          {
+            "group": ["@/features/*/*/**"],
+            "message": "Import from the feature's index.ts, not its internals."
+          }
+        ]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["src/lib/**", "src/features/*/services/**"],
+      "rules": { "no-restricted-imports": "off" }
+    }
+  ],
+  "ignorePatterns": ["dist", "node_modules"]
+}
