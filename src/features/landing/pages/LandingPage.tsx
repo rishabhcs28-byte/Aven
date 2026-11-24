@@ -8,16 +8,16 @@ import { TrustSection } from '../components/TrustSection'
 import { WeightsSection } from '../components/WeightsSection'
 
 export function LandingPage() {
-    return (
-        <>
-            <HeroSection />
-            <QuoteSection />
-            <WeightsSection />
-            <HowItWorksSection />
-            <TrustSection />
-            <PricingSection />
-            <FinalCtaSection />
-            <CrisisStrip />
-        </>
-    )
+  return (
+    <>
+      <HeroSection />
+      <QuoteSection />
+      <WeightsSection />
+      <HowItWorksSection />
+      <TrustSection />
+      <PricingSection />
+      <FinalCtaSection />
+      <CrisisStrip />
+    </>
+  )
 }

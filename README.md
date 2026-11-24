@@ -85,7 +85,7 @@ From now on every database change is a migration file (see section 7).
 
 | Service               | When                            | What to do                                                                                                                                    |
 | --------------------- | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Supabase prod project | Before the pilot                | Create `Aven-prod` on the Pro plan, link it in CI/CD, use its keys only for Vercel **Production**                                        |
+| Supabase prod project | Before the pilot                | Create `Aven-prod` on the Pro plan, link it in CI/CD, use its keys only for Vercel **Production**                                             |
 | Resend + domain       | Phase 2 (auth emails)           | Add and verify your domain DNS, create an API key, set it as custom SMTP in Supabase Auth. Never commit it                                    |
 | Razorpay              | Start KYC now, build in Phase 5 | Use Test mode keys in dev. Store keys with `npx supabase secrets set RAZORPAY_KEY_ID=... RAZORPAY_KEY_SECRET=... RAZORPAY_WEBHOOK_SECRET=...` |
 | Sentry                | Phase 6                         | Create a project, add the DSN as a `VITE_SENTRY_DSN` variable                                                                                 |
@@ -185,6 +185,6 @@ A new chat knows nothing. Attach `README.md` and the five `docs/` files, then pa
 | `supabase link` fails            | Run `npx supabase login` again and check the project ref         |
 | Install or build errors          | Check `node -v` is 22+, delete `node_modules`, run `npm install` |
 | CI fails but local passes        | Run `npm ci` then `npm run check` locally                        |
-"# Aven" 
-"# Aven" 
-"# Aven" 
+| "# Aven"                         |
+| "# Aven"                         |
+| "# Aven"                         |

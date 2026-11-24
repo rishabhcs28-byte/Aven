@@ -7,15 +7,15 @@ type LinkButtonProps = LinkProps & { variant?: ButtonVariant; fullWidth?: boolea
 
 /** Navigation that looks like a button. Use this (not Button) whenever it changes the page. */
 export function LinkButton({
-    variant = 'primary',
-    fullWidth = false,
-    className = '',
-    ...rest
+  variant = 'primary',
+  fullWidth = false,
+  className = '',
+  ...rest
 }: LinkButtonProps) {
-    return (
-        <Link
-            className={`${buttonBase} ${buttonVariants[variant]} ${fullWidth ? 'w-full' : ''} ${className}`}
-            {...rest}
-        />
-    )
+  return (
+    <Link
+      className={`${buttonBase} ${buttonVariants[variant]} ${fullWidth ? 'w-full' : ''} ${className}`}
+      {...rest}
+    />
+  )
 }
