@@ -1,4 +1,4 @@
-# SafeSpace
+# Aven
 
 Private peer-support web app for male college students. Trained student **listeners** talk with students in 10-minute text sessions. Peer support, not therapy.
 
@@ -28,14 +28,14 @@ npm run check      # lint + typecheck + tests + build. Everything must pass.
 
 ### Step 2. Put the code on GitHub
 
-Create a **private** repository named `safespace` (do not add a README there), then:
+Create a **private** repository named `Aven` (do not add a README there), then:
 
 ```bash
 git init
 git add .
 git commit -m "chore: initial project scaffold"
 git branch -M main
-git remote add origin https://github.com/<your-username>/safespace.git
+git remote add origin https://github.com/<your-username>/Aven.git
 git push -u origin main
 ```
 
@@ -43,7 +43,7 @@ In GitHub: Settings > Branches > add a rule for `main` that requires a pull requ
 
 ### Step 3. Create the Supabase development project
 
-1. Supabase dashboard > **New project** > name `safespace-dev`.
+1. Supabase dashboard > **New project** > name `Aven-dev`.
 2. Region: choose South Asia (Mumbai) if listed, otherwise the nearest.
 3. Set a strong database password and save it in a password manager. You cannot read it again.
 4. Open **Project Settings > API** and copy the **Project URL** and the **anon / publishable key**. Never copy the `service_role` or secret key anywhere in this repo.
@@ -62,7 +62,7 @@ Fill in `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`. Then:
 npm run dev
 ```
 
-Open http://localhost:5173. You should see **SafeSpace setup is working**, your Supabase host and "Reachable". If you see "Invalid environment variables", fix `.env.local` and restart.
+Open http://localhost:5173. You should see **Aven setup is working**, your Supabase host and "Reachable". If you see "Invalid environment variables", fix `.env.local` and restart.
 
 ### Step 5. Connect the Supabase CLI
 
@@ -85,7 +85,7 @@ From now on every database change is a migration file (see section 7).
 
 | Service               | When                            | What to do                                                                                                                                    |
 | --------------------- | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Supabase prod project | Before the pilot                | Create `safespace-prod` on the Pro plan, link it in CI/CD, use its keys only for Vercel **Production**                                        |
+| Supabase prod project | Before the pilot                | Create `Aven-prod` on the Pro plan, link it in CI/CD, use its keys only for Vercel **Production**                                        |
 | Resend + domain       | Phase 2 (auth emails)           | Add and verify your domain DNS, create an API key, set it as custom SMTP in Supabase Auth. Never commit it                                    |
 | Razorpay              | Start KYC now, build in Phase 5 | Use Test mode keys in dev. Store keys with `npx supabase secrets set RAZORPAY_KEY_ID=... RAZORPAY_KEY_SECRET=... RAZORPAY_WEBHOOK_SECRET=...` |
 | Sentry                | Phase 6                         | Create a project, add the DSN as a `VITE_SENTRY_DSN` variable                                                                                 |
@@ -104,7 +104,7 @@ Anything starting with `VITE_` is shipped to every visitor. Real secrets must ne
 ## 4. Folder structure
 
 ```
-safespace/
+Aven/
 ├─ docs/                    project brain: read before coding
 ├─ public/                  static files (favicon, later PWA icons)
 ├─ supabase/
@@ -153,7 +153,7 @@ npx supabase db push                             # applies it to the linked proj
 npx supabase gen types typescript --linked > src/types/database.types.ts
 ```
 
-Rules: never edit an applied migration (add a new one), never change tables in the dashboard without a migration file, test on `safespace-dev` before `safespace-prod`.
+Rules: never edit an applied migration (add a new one), never change tables in the dashboard without a migration file, test on `Aven-dev` before `Aven-prod`.
 
 ## 8. Git workflow
 
@@ -185,6 +185,6 @@ A new chat knows nothing. Attach `README.md` and the five `docs/` files, then pa
 | `supabase link` fails            | Run `npx supabase login` again and check the project ref         |
 | Install or build errors          | Check `node -v` is 22+, delete `node_modules`, run `npm install` |
 | CI fails but local passes        | Run `npm ci` then `npm run check` locally                        |
-"# safespace" 
-"# safespace" 
-"# safespace" 
+"# Aven" 
+"# Aven" 
+"# Aven" 

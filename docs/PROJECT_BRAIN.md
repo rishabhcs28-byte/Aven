@@ -1,4 +1,4 @@
-# SafeSpace project brain
+# Aven project brain
 
 ## What it is
 

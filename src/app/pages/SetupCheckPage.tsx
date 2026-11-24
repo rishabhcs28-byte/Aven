@@ -9,7 +9,7 @@ export function SetupCheckPage() {
 
   return (
     <section className="py-10">
-      <h1 className="font-serif text-4xl text-teal-deep">SafeSpace setup is working</h1>
+      <h1 className="font-serif text-4xl text-teal-deep">Aven setup is working</h1>
       <dl className="mt-8 grid max-w-md grid-cols-[auto_1fr] gap-x-6 gap-y-3">
         <dt className="text-ink/70">Environment</dt>
         <dd>{env.VITE_APP_ENV}</dd>

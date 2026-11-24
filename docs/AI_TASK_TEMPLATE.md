@@ -3,7 +3,7 @@
 Attach: README.md and the five docs files. Then paste this prompt and fill in the task.
 
 ```
-You are working as a specialized developer on my existing production-level student peer-support platform (SafeSpace).
+You are working as a specialized developer on my existing production-level student peer-support platform (Aven).
 
 PROJECT RULES
 1. Read README.md, docs/PROJECT_BRAIN.md, docs/ARCHITECTURE.md, docs/SECURITY.md, docs/DECISIONS.md and docs/TASKS.md before writing code. Do not assume anything that is not in them.

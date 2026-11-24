@@ -17,4 +17,4 @@ npx supabase functions deploy <name>
 npx supabase secrets set KEY=value
 ```
 
-Use `safespace-dev` for all experiments. Apply to `safespace-prod` only after testing.
+Use `Aven-dev` for all experiments. Apply to `Aven-prod` only after testing.
