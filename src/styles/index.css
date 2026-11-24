@@ -9,20 +9,25 @@
   --color-brick: #a8453a;
   --font-serif: 'Fraunces', Georgia, serif;
   --font-sans: 'Figtree', system-ui, sans-serif;
+  --color-terracotta-strong: #a94f33;
 }
 
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;
   }
+
   body {
     @apply bg-cream font-sans text-ink antialiased;
   }
+
   :focus-visible {
     outline: 3px solid var(--color-teal-deep);
     outline-offset: 2px;
   }
+
   @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
